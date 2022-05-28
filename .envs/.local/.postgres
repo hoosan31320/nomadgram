@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=nomadgram
+POSTGRES_USER=KQOHNhZwKiMpUOzvyTGdVrUhrctoeMpp
+POSTGRES_PASSWORD=mTvo5GOEODUecBrq2MM6nuD7e72IbSWU3LY8rBFXydZR3SUEvbSRwmg7eeeleWcQ
