@@ -148,3 +148,5 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+<python manage.py migrate>
