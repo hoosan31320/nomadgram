@@ -111,7 +111,7 @@ We recommend updating your Pipfile to specify the "*" version, instead.
 
 <python manage.py runserver>
 
-<Pipfile은 아래 내용이 추가돼거나 바뀐듯>
+<Pipfile은 아래 내용이 추가돼거나 바뀐듯> <= pipenv install -r requirements/local.txt 로 인해
 ipdb = "==0.13.9"
 psycopg2-binary = "==2.9.3"
 mypy = "==0.950"
@@ -132,3 +132,19 @@ django-coverage-plugin = "==2.0.3"
 pytest-django = "==4.5.2"
 Werkzeug = {version = "==2.0.3", extras = ["watchdog"]}
 Sphinx = "==4.5.0"
+
+
+postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
+
+# https://docs.djangoproject.com/en/dev/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nomadgram',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
