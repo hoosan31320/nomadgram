@@ -177,3 +177,5 @@ You can customize this page using the CSRF_FAILURE_VIEW setting.
 < python manage.py makemigrations VS python manage.py migrate>
 https://velog.io/@yejin20/Djangomakemigrations%EC%99%80-migrate%EC%9D%98-%EC%B0%A8%EC%9D%B4
 
+
+< C:\Users\hoos3\nomadgram\nomadgram [main ≡ +0 ~1 -0 !]> django-admin startapp images >
