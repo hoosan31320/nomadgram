@@ -173,3 +173,7 @@ You’re seeing the help section of this page because you have DEBUG = True in y
 You can customize this page using the CSRF_FAILURE_VIEW setting.
 
 <그러나 정상적으로 작동중이다>
+
+< python manage.py makemigrations VS python manage.py migrate>
+https://velog.io/@yejin20/Djangomakemigrations%EC%99%80-migrate%EC%9D%98-%EC%B0%A8%EC%9D%B4
+
