@@ -1,0 +1,134 @@
+C:\Users\hoos3> python
+Python 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+C:\Users\hoos3> pip --version
+pip 22.0.4 from C:\Users\hoos3\AppData\Local\Programs\Python\Python39\lib\site-packages\pip (python 3.9)
+C:\Users\hoos3> pip3 --version
+pip 22.0.4 from C:\Users\hoos3\AppData\Local\Programs\Python\Python39\lib\site-packages\pip (python 3.9)
+C:\Users\hoos3> pipenv --version
+pipenv, version 2022.5.2
+C:\Users\hoos3> python --version
+Python 3.9.13
+
+
+전역에 (python 3.9.13만 전역에 깔려 있어서 pip3 않쓰고 pip 씀)
+pip install cookiecutter 
+<프로젝트 생성>
+cookiecutter https://github.com/pydanny/cookiecutter-django
+C:\Users\hoos3> cookiecutter https://github.com/pydanny/cookiecutter-django
+project_name [My Awesome Project]: nomadgram
+project_slug [nomadgram]:
+description [Behold My Awesome Project!]:
+author_name [Daniel Roy Greenfeld]: hoosan
+domain_name [example.com]:
+email [hoosan@example.com]: hoos31320@gmail.com
+version [0.1.0]:
+Select open_source_license:
+1 - MIT
+2 - BSD
+3 - GPLv3
+4 - Apache Software License 2.0
+5 - Not open source
+Choose from 1, 2, 3, 4, 5 [1]: 1
+timezone [UTC]:
+windows [n]:
+use_pycharm [n]:
+use_docker [n]:
+Select postgresql_version:
+1 - 14
+2 - 13
+3 - 12
+4 - 11
+5 - 10
+Choose from 1, 2, 3, 4, 5 [1]: 1
+Select cloud_provider:
+1 - AWS
+2 - GCP
+3 - None
+Choose from 1, 2, 3 [1]: 3
+Select mail_service:
+1 - Mailgun
+2 - Amazon SES
+3 - Mailjet
+4 - Mandrill
+5 - Postmark
+6 - Sendgrid
+7 - SendinBlue
+8 - SparkPost
+9 - Other SMTP
+Choose from 1, 2, 3, 4, 5, 6, 7, 8, 9 [1]: 9
+use_async [n]:
+use_drf [n]:
+Select frontend_pipeline:
+1 - None
+2 - Django Compressor
+3 - Gulp
+Choose from 1, 2, 3 [1]: 1
+use_celery [n]:
+use_mailhog [n]:
+use_sentry [n]:
+use_whitenoise [n]: y
+use_heroku [n]: y
+Select ci_tool:
+1 - None
+2 - Travis
+3 - Gitlab
+4 - Github
+Choose from 1, 2, 3, 4 [1]: 4
+keep_local_envs_in_vcs [y]:
+debug [n]:
+ [WARNING]: You chose not to use a cloud provider, media files won't be served in production.
+ [SUCCESS]: Project initialized, keep up the good work!
+C:\Users\hoos3>
+
+<cd nomadgram으로 이동>
+code . 으로 vsc open
+doc, utility 폴더 삭제, 
+CONTRIBUTORS.txt 파일 삭제
+
+<github new repository 생성>
+
+<프로젝트 폴더로 들어가 pipenv --three>
+C:\Users\hoos3\nomadgram [main ≡]> pipenv --three
+Creating a virtualenv for this project...
+Pipfile: C:\Users\hoos3\nomadgram\Pipfile
+Using C:/Users/hoos3/AppData/Local/Programs/Python/Python39/python.exe (3.9.13) to create virtualenv...
+[=== ] Creating virtual environment...created virtual environment CPython3.9.13.final.0-64 in 3377ms
+  creator CPython3Windows(dest=C:\Users\hoos3\.virtualenvs\nomadgram-xiOH2Mvd, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\hoos3\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==22.0.4, setuptools==62.1.0, wheel==0.37.1
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+Successfully created virtual environment!
+Virtualenv location: C:\Users\hoos3\.virtualenvs\nomadgram-xiOH2Mvd
+requirements.txt found in C:\Users\hoos3\nomadgram instead of Pipfile! Converting...
+Success!
+Warning: Your Pipfile now contains pinned versions, if your requirements.txt did.
+We recommend updating your Pipfile to specify the "*" version, instead.
+
+< 로컬 requirement 설치 => pipenv install -r requirements/local.txt >
+
+<python manage.py runserver>
+
+<Pipfile은 아래 내용이 추가돼거나 바뀐듯>
+ipdb = "==0.13.9"
+psycopg2-binary = "==2.9.3"
+mypy = "==0.950"
+django-stubs = "==1.9.0"
+pytest = "==7.1.2"
+pytest-sugar = "==0.9.4"
+sphinx-autobuild = "==2021.3.14"
+flake8 = "==4.0.1"
+flake8-isort = "==4.1.1"
+coverage = "==6.4"
+black = "==22.3.0"
+pylint-django = "==2.5.3"
+pre-commit = "==2.19.0"
+factory-boy = "==3.2.1"
+django-debug-toolbar = "==3.4.0"
+django-extensions = "==3.1.5"
+django-coverage-plugin = "==2.0.3"
+pytest-django = "==4.5.2"
+Werkzeug = {version = "==2.0.3", extras = ["watchdog"]}
+Sphinx = "==4.5.0"
