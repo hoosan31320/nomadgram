@@ -76,8 +76,8 @@ DJANGO_APPS = [
     "django.forms",
 ]
 THIRD_PARTY_APPS = [
-    # "crispy_forms",
-    # "crispy_bootstrap5",
+    "crispy_forms",      # 로그인 폼도 연관
+    "crispy_bootstrap5", # 로그인 폼도 연관
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
